@@ -2,9 +2,16 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.idea
 
 # C extensions
 *.so
+
+# sql
+db.sqlite3
+
+# env
+.env.dev
 
 # Distribution / packaging
 .Python
