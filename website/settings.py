@@ -20,9 +20,7 @@ DEBUG = int(os.environ.get("DEBUG", default=0))
 ALLOWED_HOSTS = ['*']
 
 # Application definition
-LOCAL_APPS = [
-    'blog',
-]
+
 DEFAULT_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -31,9 +29,16 @@ DEFAULT_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-THIRD_PARTY_APPS = [
 
+THIRD_PARTY_APPS = [
+    'django_extensions',
 ]
+
+LOCAL_APPS = [
+    'blog',
+    'users',
+]
+
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
@@ -133,3 +138,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# For Custom User
+AUTH_USER_MODEL = 'users.User'
