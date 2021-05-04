@@ -1,6 +1,6 @@
-from django.urls import path, include
+from django.urls import path
 
-from blog.views import HomeView, PostDetailView
+from blog.rest_apis.views import HomeView, PostDetailView
 
 urlpatterns = [
     path('', HomeView.as_view(), name='home'),

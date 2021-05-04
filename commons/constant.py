@@ -9,18 +9,18 @@ GENDER_CHOICES = [
     (OTHERS, 'Others'),
 ]
 
-# # Post Category
-# PYTHON = 'Python'
-# DJANGO = 'Django'
-# DRF = 'DRF'
-# GRAPHQL = 'GraphQL'
-# OOP = 'OOP'
-#
-# POST_CATEGORY = [
-#     (PYTHON, 'Python'),
-#     (DJANGO, 'Django'),
-#     (DRF, 'DRF'),
-#     (GRAPHQL, 'GraphQL'),
-#     (OOP, 'OOP'),
-#     (OTHERS, 'Others'),
-# ]
+# Post Category
+PYTHON = 'Python'
+DJANGO = 'Django'
+DRF = 'DRF'
+GRAPHQL = 'GraphQL'
+OOP = 'OOP'
+
+POST_CATEGORY = [
+    (PYTHON, 'Python'),
+    (DJANGO, 'Django'),
+    (DRF, 'DRF'),
+    (GRAPHQL, 'GraphQL'),
+    (OOP, 'OOP'),
+    (OTHERS, 'Others'),
+]
