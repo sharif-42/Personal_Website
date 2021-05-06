@@ -29,8 +29,11 @@
             </h2>
           </a>
           <p class="post-meta">Posted by
-            <a href="#">Django Blog</a>
-            on {{post.created_date}}</p>
+            <a href="#">{{post.author.full_name}}</a>
+            on {{post.created_at}}</p>
+          <p class="post-small-brief">
+            {{post.content|truncatewords:50}}
+          </p>
         </div>
         <hr>
         {% endfor %}
