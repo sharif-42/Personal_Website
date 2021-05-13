@@ -1,3 +1,5 @@
+import uuid
+
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -6,6 +8,13 @@ from users.models import User
 
 
 class Post(models.Model):
+    uuid = models.UUIDField(
+        unique=True,
+        default=uuid.uuid4,
+        editable=False,
+        verbose_name=_("UUID"),
+        help_text=_("This will be exposed to the outside world."),
+    )
     author = models.ForeignKey(User, on_delete=models.SET_NULL, related_name='posts', null=True, blank=True)
     title = models.CharField(
         max_length=200,
