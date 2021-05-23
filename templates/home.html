@@ -28,7 +28,10 @@
               {{post.title}}
             </h2>
           </a>
-          <p class="post-meta">Posted by
+
+          <p class="post-meta">
+            <a href="">{{post.category}}</a>,
+            Posted by
             <a href="#">{{post.author.full_name}}</a>
             on {{post.created_at}}</p>
           <p class="post-small-brief">
