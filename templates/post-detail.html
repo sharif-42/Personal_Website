@@ -4,65 +4,59 @@
 
 {% block content %}
 <!-- Page Header -->
-<header class="masthead" style="background-image: url('{{object.image.url}}')">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 mx-auto">
-          <div class="post-heading">
-            <h1>{{object.title}}</h1>
-            <span class="meta">Posted by
-              <a href="#">{{post.author.full_name}}</a>
-              on {{object.created_at}}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-</header>
-
+<!--<header class="masthead" style="background-image: url('{{object.image.url}}')">-->
 <article>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 mx-auto">
-         <p>{{object.content|linebreaks}}</p>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 mx-auto">
+                <h1 class="mt-4">{{object.title}}</h1>
+                <span class="meta">Posted by
+                    <a href="#">{{post.author.full_name}}</a> on {{object.created_at}}</span>
+                <p>{{object.content|safe|linebreaks}}</p>
+            </div>
         </div>
-      </div>
     </div>
 </article>
 
-<comment>
-    <div class="container">
-        <h2>Leave a comment</h2><hr>
-        <form>
-          <div class="form-group row">
-            <label for="inputName" class="col-sm-2 col-form-label">Name</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputName" placeholder="Name">
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-            <div class="col-sm-10">
-              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="inputComment" class="col-sm-2 col-form-label">Your Comment</label>
-            <div class="col-sm-10">
-              <textarea class="form-control" id="inputComment" rows="3" placeholder="Put your comment here"></textarea>
-            </div>
-          </div>
-         <div class="form-group row">
-            <div class="col-sm-10">
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-          </div>
-        </form>
-    </div><br>
-</comment>
-
 <comments>
-    <div class="container">
-        <h2>Comments</h2><hr>
+    <div class="container mt-4">
+        <h2>Comments</h2>
+        <hr>
     </div>
 </comments>
+
+<comment>
+    <div class="container mt-4">
+        <h2>Leave a comment</h2>
+        <hr>
+        <form>
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputName" placeholder="Name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputComment" class="col-sm-2 col-form-label">Your Comment</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="inputComment" rows="3"
+                              placeholder="Put your comment here"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br>
+</comment>
+
 {% endblock content %}
