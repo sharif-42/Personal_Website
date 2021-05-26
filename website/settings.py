@@ -31,7 +31,10 @@ DEFAULT_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
+    'rest_framework',
     'django_extensions',
+    'crispy_forms',
+
 ]
 
 LOCAL_APPS = [
@@ -140,3 +143,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # For Custom User
 AUTH_USER_MODEL = 'users.User'
+
+# crispy bootstrap template
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
