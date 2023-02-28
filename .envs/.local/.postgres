@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_DB=epad
+POSTGRES_USER=epad
+POSTGRES_PASSWORD=epad@pass
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
