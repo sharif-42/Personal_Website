@@ -1,9 +1,10 @@
 from django.contrib import admin
-
-from users.models import User
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
 from users.rest_apis.forms import UserChangeForm, UserCreationForm
+
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 
 class UserAdmin(BaseUserAdmin):

@@ -4,7 +4,9 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 from blog.models.post import Post
-from users.models import User
+
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 
 class Comment(models.Model):
